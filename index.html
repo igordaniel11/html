@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,24 +19,30 @@
         body {
             background-color: #050505;
             color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero {
-            min-height: 100vh;
-            padding: 40px 20px;
+            width: 100%;
+            padding: 60px 20px;
             display: flex;
             justify-content: center;
+            align-items: center;
             background: radial-gradient(circle at center, #001f3f 0%, #050505 100%);
+            min-height: 100vh;
         }
 
         .content {
             width: 100%;
-            max-width: 1200px;
+            max-width: 900px;
             text-align: center;
         }
 
         h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
         }
 
         h1 span {
@@ -58,15 +65,28 @@
         .category h2 {
             color: #00d4ff;
             margin-bottom: 15px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #00d4ff44;
             padding-bottom: 8px;
         }
 
         .fav-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            justify-items: center;
+        }
+
+        @media (max-width: 700px) {
+            .fav-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .fav-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .fav-item {
@@ -74,21 +94,28 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 18px;
+            padding: 16px 20px;
             background: rgba(17, 17, 17, 0.95);
             color: #ddd;
             text-decoration: none;
             border-radius: 12px;
             border: 1px solid #00d4ff22;
             transition: 0.3s;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            width: 100%;
         }
 
         .fav-item:hover {
             background: #00d4ff;
             color: #050505;
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .fav-item i {
+            font-size: 1rem;
+            width: 18px;
+            text-align: center;
         }
     </style>
 </head>
@@ -111,14 +138,14 @@
                         <a href="https://translate.google.com.br/" target="_blank" class="fav-item"><i class="fas fa-language"></i> Tradutor</a>
                         <a href="https://web.whatsapp.com/" target="_blank" class="fav-item"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                         <a href="https://br.linkedin.com/" target="_blank" class="fav-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://sat.sef.sc.gov.br/tax.NET/Login.aspx?ReturnUrl=%2ftax.NET%2ftax.Net.NFE%2fNfa_Solicitacao.aspx" target="_blank" class="fav-item"><i class="fab fa-instagram"></i> S@t</a>
-			            <a href="https://github.com/igordaniel11" target="_blank" class="fav-item"><i class="fas fa-github"></i> GitHub</a>
-                        <a href="https://chatgpt.com/" target="_blank" class="fav-item"><i class="fab fa-ia"></i> ChatGPT</a>
-                        <a href="https://gemini.google.com/app?hl=pt-BR/" target="_blank" class="fav-item"><i class="fas fa-gemini"></i> Gemini</a>
-                        <a href="https://1password.com/pt/password-generator" target="_blank" class="fav-item"><i class="fab fa-password"></i> 1password</a>
-                        <a href="https://www.speedtest.net/pt" target="_blank" class="fav-item"><i class="fab fa-speedtest"></i> Speedtest</a>
-
+                        <a href="https://sat.sef.sc.gov.br/tax.NET/Login.aspx?ReturnUrl=%2ftax.NET%2ftax.Net.NFE%2fNfa_Solicitacao.aspx" target="_blank" class="fav-item"><i class="fas fa-file-invoice"></i> S@t</a>
+                        <a href="https://github.com/igordaniel11" target="_blank" class="fav-item"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://chatgpt.com/" target="_blank" class="fav-item"><i class="fas fa-robot"></i> ChatGPT</a>
+                        <a href="https://gemini.google.com/app?hl=pt-BR/" target="_blank" class="fav-item"><i class="fas fa-star"></i> Gemini</a>
+                        <a href="https://1password.com/pt/password-generator" target="_blank" class="fav-item"><i class="fas fa-key"></i> 1Password</a>
+                        <a href="https://www.speedtest.net/pt" target="_blank" class="fav-item"><i class="fas fa-tachometer-alt"></i> Speedtest</a>
                     </div>
+                </div>
 
             </section>
         </div>
